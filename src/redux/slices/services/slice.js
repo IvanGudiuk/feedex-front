@@ -6,7 +6,6 @@ const initialState = {
   message: '',
   status: '',
   orders: [],
-  accounts: [],
   order: {},
   account: {},
   accounts: [],
@@ -52,6 +51,6 @@ export const {
   setIsModalShown,
   setModalType,
   setBalance,
-} = authSlice.actions;
+} = serviceSlice.actions;
 
 export const serviceReducer = serviceSlice.reducer;

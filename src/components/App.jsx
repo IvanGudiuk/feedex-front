@@ -1,16 +1,15 @@
+import { useEffect, lazy } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+const Home = lazy(() => import('Pages/Home'));
+const NotFound = lazy(() => import('Pages/NotFound'));
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };

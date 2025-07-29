@@ -137,56 +137,56 @@ const authSlice = createSlice({
         if (action.payload.status === 503) {
           state.maintence = true;
         }
-      })
-      .addCase(restorePassword.pending, (state, action) => {
-        state.isLoading = true;
-      })
-      .addCase(restorePassword.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.message = action.payload.message;
-        state.status = 'success';
-      })
-      .addCase(restorePassword.rejected, (state, action) => {
-        state.isLoading = false;
-        state.message = action.payload;
-        state.status = 'error';
-        if (action.payload.status === 503) {
-          state.maintence = true;
-        }
-      })
-      .addCase(resetPassword.pending, (state, action) => {
-        state.isLoading = true;
-      })
-      .addCase(resetPassword.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.message = action.payload.message;
-        state.status = 'success';
-      })
-      .addCase(resetPassword.rejected, (state, action) => {
-        state.isLoading = false;
-        state.message = action.payload;
-        state.status = 'error';
-        if (action.payload.status === 503) {
-          state.maintence = true;
-        }
-      })
-      .addCase(checkRestoreKey.pending, (state, action) => {
-        state.isLoading = true;
-      })
-      .addCase(checkRestoreKey.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.email = action.payload.email;
-        state.message = action.payload.message;
-        state.status = 'success';
-      })
-      .addCase(checkRestoreKey.rejected, (state, action) => {
-        state.isLoading = false;
-        state.message = action.payload;
-        state.status = 'error';
-        if (action.payload.status === 503) {
-          state.maintence = true;
-        }
       });
+    // .addCase(restorePassword.pending, (state, action) => {
+    //   state.isLoading = true;
+    // })
+    // .addCase(restorePassword.fulfilled, (state, action) => {
+    //   state.isLoading = false;
+    //   state.message = action.payload.message;
+    //   state.status = 'success';
+    // })
+    // .addCase(restorePassword.rejected, (state, action) => {
+    //   state.isLoading = false;
+    //   state.message = action.payload;
+    //   state.status = 'error';
+    //   if (action.payload.status === 503) {
+    //     state.maintence = true;
+    //   }
+    // })
+    // .addCase(resetPassword.pending, (state, action) => {
+    //   state.isLoading = true;
+    // })
+    // .addCase(resetPassword.fulfilled, (state, action) => {
+    //   state.isLoading = false;
+    //   state.message = action.payload.message;
+    //   state.status = 'success';
+    // })
+    // .addCase(resetPassword.rejected, (state, action) => {
+    //   state.isLoading = false;
+    //   state.message = action.payload;
+    //   state.status = 'error';
+    //   if (action.payload.status === 503) {
+    //     state.maintence = true;
+    //   }
+    // })
+    // .addCase(checkRestoreKey.pending, (state, action) => {
+    //   state.isLoading = true;
+    // })
+    // .addCase(checkRestoreKey.fulfilled, (state, action) => {
+    //   state.isLoading = false;
+    //   state.email = action.payload.email;
+    //   state.message = action.payload.message;
+    //   state.status = 'success';
+    // })
+    // .addCase(checkRestoreKey.rejected, (state, action) => {
+    //   state.isLoading = false;
+    //   state.message = action.payload;
+    //   state.status = 'error';
+    //   if (action.payload.status === 503) {
+    //     state.maintence = true;
+    //   }
+    // });
   },
 });
 
